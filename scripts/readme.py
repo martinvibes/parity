@@ -23,7 +23,7 @@ doc = f"""# Parity
 
 Built for the [Bitget AI Base Camp Hackathon S2](https://bitget-ai.gitbook.io/bitgetai_hackathons2) — AI Trading Desk track, Execution Assistance.
 
-**Live:** https://parity-desk.vercel.app
+**Live:** https://parity-audit.vercel.app
 
 ---
 
