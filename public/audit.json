@@ -1,0 +1,776 @@
+{
+ "generated_utc": "2026-09-17T21:18:37+00:00",
+ "study_from": 2026,
+ "fee_bps_per_side": 10.0,
+ "coverage_by_year": {
+  "2023": 0.0,
+  "2024": 0.0,
+  "2025": 31.0,
+  "2026": 82.3
+ },
+ "headline": {
+  "relations": 14,
+  "observations": 15852,
+  "share_outside_20bps": 24.8,
+  "median_persistence_bps": 8.8,
+  "widest": 667.9
+ },
+ "relations": [
+  {
+   "name": "SOXL/SOXX",
+   "base": "SOXX",
+   "leg": "SOXL",
+   "beta": 3.0,
+   "kind": "leverage",
+   "note": "Direxion Semiconductor Bull 3X",
+   "n_days": 179,
+   "n_dark": 1128,
+   "n_session": 889,
+   "session_p50": 10.52,
+   "dark_p50": 19.42,
+   "dark_p90": 65.3,
+   "dark_p99": 242.1,
+   "dark_max": 481.1,
+   "ratio": 1.85,
+   "breach_20": 48.8,
+   "breach_60": 11.2,
+   "by_hour": [
+    19.0,
+    17.4,
+    18.2,
+    17.3,
+    22.3,
+    21.3,
+    18.4,
+    22.2
+   ],
+   "volume": {
+    "quiet": 25716714,
+    "middling": 29836301,
+    "wide": 50781547
+   },
+   "persistence": {
+    "1": {
+     "mean_bps": 14.9,
+     "n": 208
+    },
+    "2": {
+     "mean_bps": 15.0,
+     "n": 207
+    },
+    "3": {
+     "mean_bps": 16.0,
+     "n": 204
+    },
+    "8": {
+     "mean_bps": 16.4,
+     "n": 204
+    }
+   },
+   "gross_multiple": 4.0,
+   "cost_round_trip_bps": 80.0
+  },
+  {
+   "name": "SQQQ/QQQ",
+   "base": "QQQ",
+   "leg": "SQQQ",
+   "beta": -3.0,
+   "kind": "leverage",
+   "note": "ProShares UltraPro Short QQQ",
+   "n_days": 180,
+   "n_dark": 1157,
+   "n_session": 889,
+   "session_p50": 4.9,
+   "dark_p50": 7.77,
+   "dark_p90": 23.2,
+   "dark_p99": 154.3,
+   "dark_max": 258.0,
+   "ratio": 1.58,
+   "breach_20": 13.8,
+   "breach_60": 2.4,
+   "by_hour": [
+    8.5,
+    8.1,
+    7.6,
+    7.4,
+    8.0,
+    7.0,
+    8.0,
+    8.1
+   ],
+   "volume": {
+    "quiet": 5323028,
+    "middling": 5210706,
+    "wide": 7625403
+   },
+   "persistence": {
+    "1": {
+     "mean_bps": 3.0,
+     "n": 22
+    },
+    "2": {
+     "mean_bps": -1.1,
+     "n": 22
+    },
+    "3": {
+     "mean_bps": -0.7,
+     "n": 21
+    },
+    "8": {
+     "mean_bps": -3.3,
+     "n": 21
+    }
+   },
+   "gross_multiple": 4.0,
+   "cost_round_trip_bps": 80.0
+  },
+  {
+   "name": "TQQQ/QQQ",
+   "base": "QQQ",
+   "leg": "TQQQ",
+   "beta": 3.0,
+   "kind": "leverage",
+   "note": "ProShares UltraPro QQQ",
+   "n_days": 183,
+   "n_dark": 1204,
+   "n_session": 900,
+   "session_p50": 3.37,
+   "dark_p50": 4.92,
+   "dark_p90": 16.7,
+   "dark_p99": 171.8,
+   "dark_max": 314.2,
+   "ratio": 1.46,
+   "breach_20": 8.2,
+   "breach_60": 2.2,
+   "by_hour": [
+    4.7,
+    4.9,
+    4.7,
+    4.6,
+    5.0,
+    4.6,
+    5.4,
+    5.6
+   ],
+   "volume": {
+    "quiet": 9236438,
+    "middling": 7656210,
+    "wide": 5616531
+   },
+   "persistence": {
+    "1": {
+     "mean_bps": 7.1,
+     "n": 34
+    },
+    "2": {
+     "mean_bps": 13.0,
+     "n": 34
+    },
+    "3": {
+     "mean_bps": 8.8,
+     "n": 34
+    },
+    "8": {
+     "mean_bps": 9.3,
+     "n": 32
+    }
+   },
+   "gross_multiple": 4.0,
+   "cost_round_trip_bps": 80.0
+  },
+  {
+   "name": "SPXU/SPY",
+   "base": "SPY",
+   "leg": "SPXU",
+   "beta": -3.0,
+   "kind": "leverage",
+   "note": "ProShares UltraPro Short S&P 500",
+   "n_days": 177,
+   "n_dark": 1105,
+   "n_session": 885,
+   "session_p50": 6.22,
+   "dark_p50": 8.31,
+   "dark_p90": 24.0,
+   "dark_p99": 72.6,
+   "dark_max": 128.7,
+   "ratio": 1.34,
+   "breach_20": 14.6,
+   "breach_60": 2.4,
+   "by_hour": [
+    9.0,
+    8.2,
+    7.6,
+    8.6,
+    7.5,
+    8.1,
+    8.5,
+    8.8
+   ],
+   "volume": {
+    "quiet": 162117,
+    "middling": 164188,
+    "wide": 407053
+   },
+   "persistence": {
+    "1": {
+     "mean_bps": 3.8,
+     "n": 42
+    },
+    "2": {
+     "mean_bps": 3.9,
+     "n": 42
+    },
+    "3": {
+     "mean_bps": 3.7,
+     "n": 42
+    },
+    "8": {
+     "mean_bps": 0.7,
+     "n": 42
+    }
+   },
+   "gross_multiple": 4.0,
+   "cost_round_trip_bps": 80.0
+  },
+  {
+   "name": "SOXS/SOXX",
+   "base": "SOXX",
+   "leg": "SOXS",
+   "beta": -3.0,
+   "kind": "leverage",
+   "note": "Direxion Semiconductor Bear 3X",
+   "n_days": 179,
+   "n_dark": 1130,
+   "n_session": 885,
+   "session_p50": 22.76,
+   "dark_p50": 25.63,
+   "dark_p90": 87.2,
+   "dark_p99": 243.9,
+   "dark_max": 329.8,
+   "ratio": 1.13,
+   "breach_20": 59.5,
+   "breach_60": 18.1,
+   "by_hour": [
+    24.7,
+    21.2,
+    26.9,
+    21.5,
+    27.1,
+    26.5,
+    22.4,
+    27.7
+   ],
+   "volume": {
+    "quiet": 6218520,
+    "middling": 6167893,
+    "wide": 6308609
+   },
+   "persistence": {
+    "1": {
+     "mean_bps": 28.0,
+     "n": 306
+    },
+    "2": {
+     "mean_bps": 31.4,
+     "n": 306
+    },
+    "3": {
+     "mean_bps": 30.9,
+     "n": 306
+    },
+    "8": {
+     "mean_bps": 32.7,
+     "n": 306
+    }
+   },
+   "gross_multiple": 4.0,
+   "cost_round_trip_bps": 80.0
+  },
+  {
+   "name": "TNA/IWM",
+   "base": "IWM",
+   "leg": "TNA",
+   "beta": 3.0,
+   "kind": "leverage",
+   "note": "Direxion Small Cap Bull 3X",
+   "n_days": 177,
+   "n_dark": 1119,
+   "n_session": 885,
+   "session_p50": 7.19,
+   "dark_p50": 8.05,
+   "dark_p90": 22.5,
+   "dark_p99": 65.7,
+   "dark_max": 506.8,
+   "ratio": 1.12,
+   "breach_20": 14.5,
+   "breach_60": 1.1,
+   "by_hour": [
+    6.9,
+    9.1,
+    8.0,
+    7.6,
+    8.4,
+    7.6,
+    7.7,
+    9.6
+   ],
+   "volume": {
+    "quiet": 158025,
+    "middling": 208053,
+    "wide": 288294
+   },
+   "persistence": {
+    "1": {
+     "mean_bps": 5.7,
+     "n": 16
+    },
+    "2": {
+     "mean_bps": 5.8,
+     "n": 16
+    },
+    "3": {
+     "mean_bps": 6.9,
+     "n": 16
+    },
+    "8": {
+     "mean_bps": 8.7,
+     "n": 16
+    }
+   },
+   "gross_multiple": 4.0,
+   "cost_round_trip_bps": 80.0
+  },
+  {
+   "name": "TZA/IWM",
+   "base": "IWM",
+   "leg": "TZA",
+   "beta": -3.0,
+   "kind": "leverage",
+   "note": "Direxion Small Cap Bear 3X",
+   "n_days": 177,
+   "n_dark": 1100,
+   "n_session": 885,
+   "session_p50": 14.22,
+   "dark_p50": 15.39,
+   "dark_p90": 43.1,
+   "dark_p99": 107.0,
+   "dark_max": 149.7,
+   "ratio": 1.08,
+   "breach_20": 37.5,
+   "breach_60": 4.8,
+   "by_hour": [
+    15.1,
+    13.4,
+    15.2,
+    16.3,
+    15.0,
+    15.2,
+    17.1,
+    17.5
+   ],
+   "volume": {
+    "quiet": 60744,
+    "middling": 68554,
+    "wide": 116843
+   },
+   "persistence": {
+    "1": {
+     "mean_bps": 23.2,
+     "n": 109
+    },
+    "2": {
+     "mean_bps": 22.9,
+     "n": 107
+    },
+    "3": {
+     "mean_bps": 20.7,
+     "n": 107
+    },
+    "8": {
+     "mean_bps": 23.6,
+     "n": 104
+    }
+   },
+   "gross_multiple": 4.0,
+   "cost_round_trip_bps": 80.0
+  },
+  {
+   "name": "SQQQ/TQQQ",
+   "base": "TQQQ",
+   "leg": "SQQQ",
+   "beta": -1.0,
+   "kind": "mirror",
+   "note": "UltraPro QQQ against UltraPro Short QQQ",
+   "n_days": 180,
+   "n_dark": 1154,
+   "n_session": 887,
+   "session_p50": 5.79,
+   "dark_p50": 5.69,
+   "dark_p90": 18.2,
+   "dark_p99": 180.8,
+   "dark_max": 225.8,
+   "ratio": 0.98,
+   "breach_20": 8.6,
+   "breach_60": 2.2,
+   "by_hour": [
+    5.8,
+    5.2,
+    6.2,
+    5.6,
+    5.0,
+    5.6,
+    5.7,
+    6.8
+   ],
+   "volume": {
+    "quiet": 5235658,
+    "middling": 6856477,
+    "wide": 9686721
+   },
+   "persistence": {
+    "1": {
+     "mean_bps": -0.7,
+     "n": 21
+    },
+    "2": {
+     "mean_bps": -0.9,
+     "n": 21
+    },
+    "3": {
+     "mean_bps": -1.7,
+     "n": 21
+    },
+    "8": {
+     "mean_bps": -2.1,
+     "n": 21
+    }
+   },
+   "gross_multiple": 2.0,
+   "cost_round_trip_bps": 40.0
+  },
+  {
+   "name": "SMH/SOXX",
+   "base": "SOXX",
+   "leg": "SMH",
+   "beta": 1.0,
+   "kind": "wrapper",
+   "note": "iShares vs VanEck semiconductors",
+   "n_days": 180,
+   "n_dark": 1153,
+   "n_session": 886,
+   "session_p50": 13.5,
+   "dark_p50": 12.22,
+   "dark_p90": 38.0,
+   "dark_p99": 108.4,
+   "dark_max": 178.6,
+   "ratio": 0.91,
+   "breach_20": 30.4,
+   "breach_60": 3.4,
+   "by_hour": [
+    9.5,
+    11.1,
+    14.0,
+    11.3,
+    11.1,
+    13.8,
+    12.0,
+    16.3
+   ],
+   "volume": {
+    "quiet": 996046,
+    "middling": 1915839,
+    "wide": 2902312
+   },
+   "persistence": {
+    "1": {
+     "mean_bps": 6.4,
+     "n": 83
+    },
+    "2": {
+     "mean_bps": 7.2,
+     "n": 83
+    },
+    "3": {
+     "mean_bps": 6.8,
+     "n": 83
+    },
+    "8": {
+     "mean_bps": 8.9,
+     "n": 83
+    }
+   },
+   "gross_multiple": 2.0,
+   "cost_round_trip_bps": 40.0
+  },
+  {
+   "name": "TZA/TNA",
+   "base": "TNA",
+   "leg": "TZA",
+   "beta": -1.0,
+   "kind": "mirror",
+   "note": "Small Cap Bull 3X against Bear 3X",
+   "n_days": 177,
+   "n_dark": 1096,
+   "n_session": 885,
+   "session_p50": 15.97,
+   "dark_p50": 14.24,
+   "dark_p90": 39.4,
+   "dark_p99": 125.1,
+   "dark_max": 481.7,
+   "ratio": 0.89,
+   "breach_20": 34.9,
+   "breach_60": 4.2,
+   "by_hour": [
+    15.3,
+    12.8,
+    14.7,
+    14.5,
+    13.8,
+    13.2,
+    16.6,
+    16.3
+   ],
+   "volume": {
+    "quiet": 64814,
+    "middling": 63136,
+    "wide": 108525
+   },
+   "persistence": {
+    "1": {
+     "mean_bps": 24.1,
+     "n": 92
+    },
+    "2": {
+     "mean_bps": 24.4,
+     "n": 91
+    },
+    "3": {
+     "mean_bps": 24.9,
+     "n": 90
+    },
+    "8": {
+     "mean_bps": 30.0,
+     "n": 87
+    }
+   },
+   "gross_multiple": 2.0,
+   "cost_round_trip_bps": 40.0
+  },
+  {
+   "name": "SOXS/SOXL",
+   "base": "SOXL",
+   "leg": "SOXS",
+   "beta": -1.0,
+   "kind": "mirror",
+   "note": "Semiconductor Bull 3X against Bear 3X",
+   "n_days": 184,
+   "n_dark": 1154,
+   "n_session": 891,
+   "session_p50": 23.59,
+   "dark_p50": 19.9,
+   "dark_p90": 73.4,
+   "dark_p99": 454.2,
+   "dark_max": 667.9,
+   "ratio": 0.84,
+   "breach_20": 49.8,
+   "breach_60": 16.5,
+   "by_hour": [
+    15.6,
+    18.1,
+    19.2,
+    17.0,
+    21.0,
+    20.8,
+    20.7,
+    24.7
+   ],
+   "volume": {
+    "quiet": 6019961,
+    "middling": 5908331,
+    "wide": 8105005
+   },
+   "persistence": {
+    "1": {
+     "mean_bps": 29.5,
+     "n": 276
+    },
+    "2": {
+     "mean_bps": 34.2,
+     "n": 273
+    },
+    "3": {
+     "mean_bps": 31.2,
+     "n": 271
+    },
+    "8": {
+     "mean_bps": 29.5,
+     "n": 267
+    }
+   },
+   "gross_multiple": 2.0,
+   "cost_round_trip_bps": 40.0
+  },
+  {
+   "name": "UPRO/SPY",
+   "base": "SPY",
+   "leg": "UPRO",
+   "beta": 3.0,
+   "kind": "leverage",
+   "note": "ProShares UltraPro S&P 500",
+   "n_days": 177,
+   "n_dark": 1124,
+   "n_session": 885,
+   "session_p50": 9.78,
+   "dark_p50": 5.95,
+   "dark_p90": 18.5,
+   "dark_p99": 70.8,
+   "dark_max": 81.0,
+   "ratio": 0.61,
+   "breach_20": 8.5,
+   "breach_60": 1.4,
+   "by_hour": [
+    5.6,
+    5.8,
+    5.9,
+    5.6,
+    5.7,
+    5.9,
+    6.6,
+    7.4
+   ],
+   "volume": {
+    "quiet": 414871,
+    "middling": 418135,
+    "wide": 468245
+   },
+   "persistence": {
+    "1": {
+     "mean_bps": 3.6,
+     "n": 24
+    },
+    "2": {
+     "mean_bps": 3.0,
+     "n": 24
+    },
+    "3": {
+     "mean_bps": 3.3,
+     "n": 24
+    },
+    "8": {
+     "mean_bps": 3.8,
+     "n": 24
+    }
+   },
+   "gross_multiple": 4.0,
+   "cost_round_trip_bps": 80.0
+  },
+  {
+   "name": "QLD/QQQ",
+   "base": "QQQ",
+   "leg": "QLD",
+   "beta": 2.0,
+   "kind": "leverage",
+   "note": "ProShares Ultra QQQ",
+   "n_days": 177,
+   "n_dark": 1123,
+   "n_session": 885,
+   "session_p50": 7.51,
+   "dark_p50": 4.09,
+   "dark_p90": 15.0,
+   "dark_p99": 49.0,
+   "dark_max": 63.8,
+   "ratio": 0.54,
+   "breach_20": 7.0,
+   "breach_60": 0.4,
+   "by_hour": [
+    3.8,
+    4.1,
+    3.0,
+    4.3,
+    3.9,
+    4.1,
+    4.3,
+    5.3
+   ],
+   "volume": {
+    "quiet": 751872,
+    "middling": 1251498,
+    "wide": 883224
+   },
+   "persistence": {
+    "1": {
+     "mean_bps": -0.2,
+     "n": 41
+    },
+    "2": {
+     "mean_bps": -0.6,
+     "n": 41
+    },
+    "3": {
+     "mean_bps": -0.8,
+     "n": 41
+    },
+    "8": {
+     "mean_bps": -1.2,
+     "n": 41
+    }
+   },
+   "gross_multiple": 3.0,
+   "cost_round_trip_bps": 60.0
+  },
+  {
+   "name": "SPXU/UPRO",
+   "base": "UPRO",
+   "leg": "SPXU",
+   "beta": -1.0,
+   "kind": "mirror",
+   "note": "UltraPro S&P against UltraPro Short S&P",
+   "n_days": 177,
+   "n_dark": 1105,
+   "n_session": 885,
+   "session_p50": 11.23,
+   "dark_p50": 6.08,
+   "dark_p90": 22.0,
+   "dark_p99": 98.6,
+   "dark_max": 157.4,
+   "ratio": 0.54,
+   "breach_20": 12.4,
+   "breach_60": 1.4,
+   "by_hour": [
+    7.5,
+    6.3,
+    5.7,
+    6.1,
+    5.6,
+    5.8,
+    6.4,
+    6.1
+   ],
+   "volume": {
+    "quiet": 157953,
+    "middling": 193009,
+    "wide": 596985
+   },
+   "persistence": {
+    "1": {
+     "mean_bps": 0.9,
+     "n": 16
+    },
+    "2": {
+     "mean_bps": -1.5,
+     "n": 16
+    },
+    "3": {
+     "mean_bps": -4.8,
+     "n": 16
+    },
+    "8": {
+     "mean_bps": -19.7,
+     "n": 16
+    }
+   },
+   "gross_multiple": 2.0,
+   "cost_round_trip_bps": 40.0
+  }
+ ]
+}

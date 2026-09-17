@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+/* ───────────────────────────────────────────────────────────────────────────
+   Parity is a document, not a terminal. It is set like an audit report: a cool
+   paper ground, ink text, hard rules, and one printed red reserved for the only
+   thing that matters — a violated identity. No glass, no blur, no glow.
+   ─────────────────────────────────────────────────────────────────────────── */
+
+:root {
+  --paper:      #f3f4f7;
+  --card:       #ffffff;
+  --ink:        #111419;
+  --ink-2:      #4c5560;
+  --ink-3:      #838d9a;
+  --rule:       #d8dce3;
+  --rule-hard:  #b9c0ca;
+  --fail:       #bf3226;   /* printed red, not neon */
+  --pass:       #1c6b4a;
+  --warn:       #94670f;
+  --mark:       #2b4a7e;   /* the one structural accent */
+  --mark-wash:  #e7ecf5;
+}
+
+:root[data-theme="dark"] {
+  --paper:      #0d0f13;
+  --card:       #14171d;
+  --ink:        #e8eaee;
+  --ink-2:      #98a1ad;
+  --ink-3:      #626b78;
+  --rule:       #242932;
+  --rule-hard:  #333a45;
+  --fail:       #e2584a;
+  --pass:       #45b184;
+  --warn:       #d5a03f;
+  --mark:       #7ea3db;
+  --mark-wash:  #18202c;
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper:      #0d0f13;
+    --card:       #14171d;
+    --ink:        #e8eaee;
+    --ink-2:      #98a1ad;
+    --ink-3:      #626b78;
+    --rule:       #242932;
+    --rule-hard:  #333a45;
+    --fail:       #e2584a;
+    --pass:       #45b184;
+    --warn:       #d5a03f;
+    --mark:       #7ea3db;
+    --mark-wash:  #18202c;
+    color-scheme: dark;
+  }
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-card: var(--card);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-rule: var(--rule);
+  --color-fail: var(--fail);
+  --color-pass: var(--pass);
+  --color-warn: var(--warn);
+  --color-mark: var(--mark);
+  --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, "SF Mono", monospace;
+}
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.005em;
+}
+
+::selection { background: var(--mark); color: var(--paper); }
+
+/* ── document furniture ─────────────────────────────────────────────────── */
+
+.sheet {
+  background: var(--card);
+  border: 1px solid var(--rule);
+}
+
+.rule   { border-color: var(--rule); }
+.rule-b { border-bottom: 1px solid var(--rule); }
+.rule-t { border-top: 1px solid var(--rule); }
+
+/* A label is set like a form field caption: small, spaced, quiet. */
+.cap {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  font-weight: 500;
+}
+
+.num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+  letter-spacing: -0.01em;
+}
+
+/* Section numbers, because an audit genuinely is a sequence. */
+.seq {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--mark);
+  letter-spacing: 0.08em;
+}
+
+/* The verdict stamp. Square, hard, printed. */
+.stamp {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 3px 7px;
+  border: 1px solid currentColor;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* A hairline ruled table, the way a statement is set. */
+.ledger { width: 100%; border-collapse: collapse; }
+.ledger th, .ledger td { padding: 9px 14px; border-bottom: 1px solid var(--rule); }
+.ledger th { text-align: left; font-weight: 500; }
+.ledger tbody tr:last-child td { border-bottom: 0; }
+.ledger tbody tr:hover { background: var(--mark-wash); }
+
+/* The breach bar: a single measured line, not a gradient. */
+.gauge { height: 3px; background: var(--rule); position: relative; overflow: hidden; }
+.gauge > i { position: absolute; inset: 0 auto 0 0; display: block; }
+
+.link { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--rule-hard); }
+.link:hover { text-decoration-color: currentColor; }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+@keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.rise { animation: rise 0.45s cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .rise { animation: none; }
+  * { transition: none !important; }
+}

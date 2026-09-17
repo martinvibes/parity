@@ -1,0 +1,9 @@
+.venv
+data
+tests
+scripts
+parity
+*.py
+.next
+node_modules
+requirements.txt
