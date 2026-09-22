@@ -33,3 +33,14 @@ export async function pool<T, R>(items: T[], n: number, fn: (t: T) => Promise<R>
   }));
   return out;
 }
+
+/** Recent bars (not history) — used by the research chart. */
+export async function recent(symbol: string, granularity = "1h", limit = 200): Promise<Candle[]> {
+  const rows = await get<string[][]>("/api/v2/spot/market/candles", { symbol, granularity, limit });
+  return rows.map((r) => ({ t: +r[0], o: +r[1], h: +r[2], l: +r[3], c: +r[4], v: +r[6] }));
+}
+
+export async function ticker(symbol: string): Promise<Ticker | null> {
+  const d = await get<Ticker[]>("/api/v2/spot/market/tickers", { symbol });
+  return d?.[0] ?? null;
+}

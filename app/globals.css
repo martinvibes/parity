@@ -1,158 +1,129 @@
 @import "tailwindcss";
 
 /* ───────────────────────────────────────────────────────────────────────────
-   Parity is a document, not a terminal. It is set like an audit report: a cool
-   paper ground, ink text, hard rules, and one printed red reserved for the only
-   thing that matters — a violated identity. No glass, no blur, no glow.
+   Ported from BlindPay: pure black ground, monochrome accents, glass surfaces,
+   Space Grotesk, floating orbs and a shimmer pass across every card.
    ─────────────────────────────────────────────────────────────────────────── */
 
-:root {
-  --paper:      #f3f4f7;
-  --card:       #ffffff;
-  --ink:        #111419;
-  --ink-2:      #4c5560;
-  --ink-3:      #838d9a;
-  --rule:       #d8dce3;
-  --rule-hard:  #b9c0ca;
-  --fail:       #bf3226;   /* printed red, not neon */
-  --pass:       #1c6b4a;
-  --warn:       #94670f;
-  --mark:       #2b4a7e;   /* the one structural accent */
-  --mark-wash:  #e7ecf5;
-}
+@theme {
+  --color-background: #000000;
+  --color-foreground: #ffffff;
 
-:root[data-theme="dark"] {
-  --paper:      #0d0f13;
-  --card:       #14171d;
-  --ink:        #e8eaee;
-  --ink-2:      #98a1ad;
-  --ink-3:      #626b78;
-  --rule:       #242932;
-  --rule-hard:  #333a45;
-  --fail:       #e2584a;
-  --pass:       #45b184;
-  --warn:       #d5a03f;
-  --mark:       #7ea3db;
-  --mark-wash:  #18202c;
-  color-scheme: dark;
-}
+  --color-void-main: #000000;
+  --color-void-lighter: #0a0a0a;
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --paper:      #0d0f13;
-    --card:       #14171d;
-    --ink:        #e8eaee;
-    --ink-2:      #98a1ad;
-    --ink-3:      #626b78;
-    --rule:       #242932;
-    --rule-hard:  #333a45;
-    --fail:       #e2584a;
-    --pass:       #45b184;
-    --warn:       #d5a03f;
-    --mark:       #7ea3db;
-    --mark-wash:  #18202c;
-    color-scheme: dark;
+  --color-neon-primary: #ffffff;
+  --color-neon-secondary: #a3a3a3;
+  --color-neon-accent: #525252;
+
+  --color-glass-border: rgba(255, 255, 255, 0.15);
+  --color-glass-border-hover: rgba(255, 255, 255, 0.3);
+  --color-glass-surface: rgba(10, 10, 10, 0.6);
+  --color-glass-highlight: rgba(255, 255, 255, 0.1);
+
+  --font-sans: var(--font-space-grotesk), "Space Grotesk", sans-serif;
+
+  --shadow-neon: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  --shadow-glass-hover: 0 8px 32px 0 rgba(0, 0, 0, 0.7);
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-delayed: float 6s ease-in-out 3s infinite;
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-shimmer: shimmer 2.5s linear infinite;
+  --animate-glow: glow 2s ease-in-out infinite alternate;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  @keyframes shimmer {
+    100% { transform: translateX(100%); }
+  }
+  @keyframes glow {
+    0%   { box-shadow: 0 0 5px rgba(255,255,255,0.1), 0 0 10px rgba(255,255,255,0.05); }
+    100% { box-shadow: 0 0 20px rgba(255,255,255,0.4), 0 0 40px rgba(255,255,255,0.2); }
+  }
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+  }
+  @keyframes cycle-text {
+    0%, 45%  { transform: translateY(0); }
+    50%, 95% { transform: translateY(-100%); }
+    100%     { transform: translateY(-200%); }
   }
 }
 
-@theme inline {
-  --color-paper: var(--paper);
-  --color-card: var(--card);
-  --color-ink: var(--ink);
-  --color-ink-2: var(--ink-2);
-  --color-ink-3: var(--ink-3);
-  --color-rule: var(--rule);
-  --color-fail: var(--fail);
-  --color-pass: var(--pass);
-  --color-warn: var(--warn);
-  --color-mark: var(--mark);
-  --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-plex-mono), ui-monospace, "SF Mono", monospace;
+@layer base {
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    min-height: 100vh;
+
+    /* Deep space layering. */
+    background-image:
+      radial-gradient(circle at 10% 40%, rgba(255, 255, 255, 0.05), transparent 50%),
+      radial-gradient(circle at 90% 20%, rgba(100, 100, 100, 0.1), transparent 50%),
+      radial-gradient(circle at 50% 10%, rgba(255, 255, 255, 0.02), transparent 70%);
+    background-attachment: fixed;
+  }
+
+  ::selection { background-color: rgba(255, 255, 255, 0.2); color: #ffffff; }
+
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: #0a0a0a; }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.3); }
+
+  input, select, textarea { font-family: inherit; }
+  input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; }
 }
 
-html { -webkit-text-size-adjust: 100%; }
-
-body {
-  background: var(--paper);
-  color: var(--ink);
-  font-family: var(--font-sans);
-  font-size: 15px;
-  line-height: 1.55;
-  -webkit-font-smoothing: antialiased;
-  letter-spacing: -0.005em;
+@utility container-custom {
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+  width: 100%;
 }
 
-::selection { background: var(--mark); color: var(--paper); }
-
-/* ── document furniture ─────────────────────────────────────────────────── */
-
-.sheet {
-  background: var(--card);
-  border: 1px solid var(--rule);
+@utility glass-panel {
+  background: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(40px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
 }
 
-.rule   { border-color: var(--rule); }
-.rule-b { border-bottom: 1px solid var(--rule); }
-.rule-t { border-top: 1px solid var(--rule); }
+@utility animate-cycle-text {
+  animation: cycle-text 4.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
 
-/* A label is set like a form field caption: small, spaced, quiet. */
-.cap {
-  font-family: var(--font-mono);
-  font-size: 10.5px;
-  letter-spacing: 0.1em;
+/* Numbers in a monochrome desk have to line up. */
+@utility tnum {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+@utility label-xs {
+  font-size: 10px;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--ink-3);
+  color: #a3a3a3;
   font-weight: 500;
 }
 
-.num {
-  font-family: var(--font-mono);
-  font-variant-numeric: tabular-nums;
-  font-feature-settings: "tnum" 1;
-  letter-spacing: -0.01em;
-}
-
-/* Section numbers, because an audit genuinely is a sequence. */
-.seq {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--mark);
-  letter-spacing: 0.08em;
-}
-
-/* The verdict stamp. Square, hard, printed. */
-.stamp {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  padding: 3px 7px;
-  border: 1px solid currentColor;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-/* A hairline ruled table, the way a statement is set. */
-.ledger { width: 100%; border-collapse: collapse; }
-.ledger th, .ledger td { padding: 9px 14px; border-bottom: 1px solid var(--rule); }
-.ledger th { text-align: left; font-weight: 500; }
-.ledger tbody tr:last-child td { border-bottom: 0; }
-.ledger tbody tr:hover { background: var(--mark-wash); }
-
-/* The breach bar: a single measured line, not a gradient. */
-.gauge { height: 3px; background: var(--rule); position: relative; overflow: hidden; }
-.gauge > i { position: absolute; inset: 0 auto 0 0; display: block; }
-
-.link { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--rule-hard); }
-.link:hover { text-decoration-color: currentColor; }
-
-.no-scrollbar::-webkit-scrollbar { display: none; }
-.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-
-@keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
-.rise { animation: rise 0.45s cubic-bezier(0.16, 1, 0.3, 1) both; }
-
 @media (prefers-reduced-motion: reduce) {
-  .rise { animation: none; }
-  * { transition: none !important; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
 }
