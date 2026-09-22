@@ -84,9 +84,19 @@ That is the finding, not a failure to find one. These are defects you *pay*, not
 
 Before you put an order into an rToken at two in the morning, Parity tells you whether the venue's own arithmetic agrees with the price you are about to take, and — from 179 measured nights — whether that gap will still be there when you try to get out.
 
+## The site
+
+Five surfaces, one argument.
+
+- **/** — the thesis, and the worst identity on the book right now.
+- **/board** — every identity ranked by how far it has drifted, with the arithmetic behind each one, the pair's own p90 as the yardstick, and where in the night it usually breaks. Re-read from Bitget every 45 seconds, entirely in the browser.
+- **/research** — a candlestick chart on any rToken or spot symbol, and an analyst you can ask anything. It has three tools wired to Bitget's public market API — spot price, recent candles, the day's movers — and is instructed never to answer a price question from memory. The chips above each answer name the call it actually made. The live board is handed to it as context, so "what is breaking tonight" is answered off the same reading you can see.
+- **/evidence** — the four tables above, plus the raw `audit.json`.
+- **/method** — what is measured, how, and where it stops being true.
+
 ## Reproducing it
 
-No API key, no account, no signing. Everything is Bitget's public spot endpoints.
+The audit needs no API key, no account, no signing — everything is Bitget's public spot endpoints. Only the analyst on /research needs a key (`OPENAI_API_KEY`); without one the rest of the site is unaffected.
 
 ```bash
 python3 scripts/fetch.py    # hourly candles for the 14 tickers the identities touch
